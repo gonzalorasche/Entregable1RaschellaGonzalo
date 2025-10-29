@@ -1,0 +1,187 @@
+/* ---------- ESTILOS GENERALES ---------- */
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #f2f6fa;
+  margin: 0;
+  padding: 0;
+  color: #222;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ---------- SECCIÓN DESCRIPCIÓN ---------- */
+.descripcion {
+  text-align: center;
+  padding: 60px 20px 30px 20px;
+  max-width: 800px;
+}
+
+.descripcion h1 {
+  color: #002b5b;
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.descripcion p {
+  color: #555;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* ---------- BOTÓN PRINCIPAL COTIZAR ---------- */
+button {
+  cursor: pointer;
+  border: none;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+button[onclick="mostrarCotizacion()"] {
+  display: block;
+  margin: 30px auto;
+  background: linear-gradient(135deg, #0077b6, #00b4d8);
+  color: white;
+  font-size: 1.6rem;
+  font-weight: 700;
+  padding: 20px 60px;
+  border-radius: 50px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+}
+
+button[onclick="mostrarCotizacion()"]:hover {
+  transform: scale(1.05);
+}
+
+/* ---------- BLOQUE DE COTIZACIÓN ---------- */
+#contenidoCotizacion {
+  display: none;
+  text-align: center;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 20px auto 50px auto;
+}
+
+/* ---------- BUSCADOR DE CRUCEROS (EN EL EJEMPLO DE COMO SERÍA) ---------- */
+.search-section {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px 80px 20px;
+  width: 100%;
+}
+
+.search-bar {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 25px 30px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  max-width: 1000px;
+  width: 90%;
+}
+
+.search-title {
+  font-size: 1.8rem;
+  color: #003366;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* ---------- CAMPOS DEL BUSCADOR ---------- */
+.search-fields {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.search-field {
+  flex: 1 1 220px;
+  display: flex;
+  flex-direction: column;
+}
+
+.field-text label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #003366;
+}
+
+.field-text select {
+  height: 45px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  background-color: #f0f4fa;
+  padding: 0 10px;
+  color: #003366;
+  font-size: 14px;
+}
+
+/* ---------- BOTONES DEL BUSCADOR ---------- */
+.search-actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.btn-clear,
+.btn-search {
+  flex: 1;
+  max-width: 200px;
+  border: none;
+  border-radius: 12px;
+  font-size: 15px;
+  padding: 12px 0;
+  transition: all 0.3s;
+}
+
+.btn-clear {
+  background-color: #d9e2ec;
+  color: #333;
+}
+
+.btn-clear:hover {
+  background-color: #c6d4e3;
+}
+
+.btn-search {
+  background-color: #ffcc00;
+  color: #000;
+  font-weight: 600;
+}
+
+.btn-search:hover {
+  background-color: #ffe066;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+  .descripcion {
+    padding: 40px 20px;
+  }
+
+  button[onclick="mostrarCotizacion()"] {
+    font-size: 1.3rem;
+    padding: 16px 40px;
+  }
+
+  .search-fields {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn-clear,
+  .btn-search {
+    width: 100%;
+    max-width: none;
+  }
+}
